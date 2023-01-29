@@ -10,7 +10,6 @@ import com.example.newsapp.databinding.ActivityNewsBinding
 
 class NewsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNewsBinding
-    private val KEY: String = "150432a6b07b42fb8286419d6eb74964"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityNewsBinding.inflate(layoutInflater)
@@ -18,5 +17,6 @@ class NewsActivity : AppCompatActivity() {
 
         val newsNavHostFragment = findViewById<View>(R.id.newsNavHostFragment)
         binding.bottomNavigationView.setupWithNavController(newsNavHostFragment.findNavController())
+
     }
 }
