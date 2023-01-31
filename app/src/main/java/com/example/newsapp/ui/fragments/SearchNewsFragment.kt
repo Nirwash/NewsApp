@@ -9,11 +9,11 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.newsapp.NewsViewModel
 import com.example.newsapp.R
 import com.example.newsapp.adapters.NewsAdapter
 import com.example.newsapp.databinding.FragmentSearchNewsBinding
 import com.example.newsapp.ui.NewsActivity
+import com.example.newsapp.ui.NewsViewModel
 import com.example.newsapp.util.Constants
 import com.example.newsapp.util.Constants.Companion.SEARCH_NEWS_TIME_DELAY
 import com.example.newsapp.util.Resource

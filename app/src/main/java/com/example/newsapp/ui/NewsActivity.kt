@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.newsapp.NewsViewModel
 import com.example.newsapp.R
 import com.example.newsapp.databinding.ActivityNewsBinding
 import com.example.newsapp.db.ArticleDatabase

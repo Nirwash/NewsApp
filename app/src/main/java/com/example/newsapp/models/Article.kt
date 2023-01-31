@@ -10,14 +10,14 @@ import kotlinx.parcelize.Parcelize
 data class Article(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
-    val author: String,
-    val content: String,
-    val description: String,
-    val publishedAt: String,
-    val source: Source,
-    val title: String,
-    val url: String,
-    val urlToImage: String
+    var author: String = "",
+    var content: String = "",
+    var description: String = "",
+    var publishedAt: String = "",
+    var source: Source,
+    var title: String = "",
+    var url: String = "",
+    var urlToImage: String = ""
 ) : Parcelable {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

@@ -5,8 +5,8 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Source(
-    val id: String,
-    val name: String
+    var id: String = "",
+    var name: String = ""
 ) : Parcelable {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
