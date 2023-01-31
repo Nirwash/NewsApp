@@ -11,6 +11,7 @@ import com.example.newsapp.NewsViewModel
 import com.example.newsapp.adapters.NewsAdapter
 import com.example.newsapp.databinding.FragmentBreakingNewsBinding
 import com.example.newsapp.ui.NewsActivity
+import com.example.newsapp.util.Constants.Companion.TAG
 import com.example.newsapp.util.Resource
 
 
@@ -19,7 +20,6 @@ class BreakingNewsFragment : Fragment() {
     private val binding get() = _binding!!
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
-    private val TAG = "BreakingNewsFragment"
 
 
     override fun onCreateView(
@@ -28,14 +28,12 @@ class BreakingNewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentBreakingNewsBinding.inflate(inflater, container, false)
-        Log.d("viewModel", "from fragment onCreateView")
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as NewsActivity).newsViewModel
-        Log.d("viewModel", "from fragment onViewCreated")
         setupRecyclerView()
         viewModel.breakingNews.observe(viewLifecycleOwner) { response ->
             when (response) {
