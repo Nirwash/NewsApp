@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.newsapp.NewsApp
 import com.example.newsapp.R
 import com.example.newsapp.databinding.ActivityNewsBinding
 import com.example.newsapp.db.ArticleDatabase
@@ -18,7 +19,7 @@ class NewsActivity : AppCompatActivity() {
         NewsRepository(ArticleDatabase(this))
     }
     private val factory: NewsViewModelProviderFactory by lazy {
-        NewsViewModelProviderFactory(newsRepository)
+        NewsViewModelProviderFactory(application as NewsApp, newsRepository)
     }
     val newsViewModel: NewsViewModel by lazy {
         ViewModelProvider(this, factory)[NewsViewModel::class.java]
